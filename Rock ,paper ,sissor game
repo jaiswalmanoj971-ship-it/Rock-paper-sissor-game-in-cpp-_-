@@ -1,0 +1,57 @@
+//Game rock paper sissor ; 
+#include <iostream>
+ using namespace std;
+ int main(){
+
+  cout<<"Hlwwww buddy Lets plat rock paper sissor"<<endl;
+  int choose;
+  int system;
+  cout<<"Choose One of them in these three option :Rock , paper, sissor"<<endl;
+  cin>>choose;
+  switch(choose){
+    case 1:
+      cout<<"You have chosen Rock"<<endl;
+      break;
+    case 2:
+      cout<<"You have chosen Paper"<<endl;
+      break;
+    case 3:
+      cout<<"You have chosen Sissor"<<endl;
+      break;
+    default:
+      cout<<"Invalid choice! Please choose between 1 to 3."<<endl;
+  }
+  srand(time(0));
+  system = rand()%3 + 1; // Generates a random number between 1 and 3
+  switch(system){
+    case 1:
+      cout<<"System has chosen Rock"<<endl;
+      break;
+    case 2:
+      cout<<"System has chosen Paper"<<endl;
+      break;
+    case 3:
+      cout<<"System has chosen Sissor"<<endl;
+      break;
+  }
+  // now reply the system choice and decide the winner
+  if(choose == system){
+    cout<<"It's a tie!"<<endl;
+  }
+  else if((choose == 1 && system == 3) || (choose == 2 && system == 1) || (choose == 3 && system == 2)){
+    cout<<"Congratulations! You win!"<<endl;
+  }
+  else{
+    cout<<"Sorry! System wins!"<<endl;
+  }
+
+
+  return 0;
+
+
+
+
+
+
+
+ }
